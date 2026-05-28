@@ -1,7 +1,7 @@
 # multiscale
 A Windows GUI orchestrator for multiplexing egress traffic across multiple isolated Tailscale networks. 
 
-This tool leverages Tailscale's userspace networking mode (`gVisor`) to run up to 5 independent Tailscale daemons simultaneously. Each instance binds to a unique local SOCKS5 port and routes traffic through a specific remote exit node. Because it uses userspace networking, it **does not** create virtual network adapters or alter the Windows system routing table. Your host machine's normal network traffic remains entirely unaffected.
+This tool leverages Tailscale's userspace networking mode (`gVisor`) to run infinite independent Tailscale daemons simultaneously. Each instance binds to a unique local SOCKS5 port and routes traffic through a specific remote exit node. Because it uses userspace networking, it **does not** create virtual network adapters or alter the Windows system routing table. Your host machine's normal network traffic remains entirely unaffected.
 
 ## Features
 * **Total Isolation:** Each node uses its own state directory and named pipe (`\\.\pipe\ts_node...`).
