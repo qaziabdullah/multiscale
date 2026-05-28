@@ -16,12 +16,3 @@ To run or compile this application, you need:
 3. **C Compiler (For Windows GUI):** Fyne requires a C-compiler to build graphics libraries. We recommend [w64devkit](https://github.com/skeeto/w64devkit/releases).
 
 ---
-
-## 🛠️ Build Instructions (Windows)
-
-Because this application uses the Fyne GUI toolkit, Go requires `CGO_ENABLED=1` and a functional `gcc` compiler to build the OpenGL components. 
-
-1. **Clone the repository:**
-   ```cmd
-   git clone [https://github.com/YOUR-USERNAME/tailscale-manager.git](https://github.com/YOUR-USERNAME/tailscale-manager.git)
-   cd tailscale-manager
