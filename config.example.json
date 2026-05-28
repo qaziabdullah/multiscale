@@ -1,0 +1,26 @@
+[
+  {
+    "name": "node1",
+    "socksPort": 1080,
+    "authKey": "tskey-auth-xxxx",
+    "exitNode": "100.xx.xx.xx"
+  },
+  {
+    "name": "node2",
+    "socksPort": 1081,
+    "authKey": "tskey-auth-xxxx",
+    "exitNode": "100.xx.xx.xx"
+  },
+  {
+    "name": "node3",
+    "socksPort": 1082,
+    "authKey": "tskey-auth-xxxx",
+    "exitNode": "100.xx.xx.xx"
+  },
+  {
+    "name": "node4",
+    "socksPort": 1083,
+    "authKey": "tskey-auth-xxxx",
+    "exitNode": "100.xx.xx.xx"
+  }
+]
