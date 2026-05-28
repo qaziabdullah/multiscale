@@ -16,3 +16,4 @@ To run or compile this application, you need:
 3. **C Compiler (For Windows GUI):** Fyne requires a C-compiler to build graphics libraries. We recommend [w64devkit](https://github.com/skeeto/w64devkit/releases).
 
 ---
+<img width="2505" height="1086" alt="multiscale" src="https://github.com/user-attachments/assets/1150a453-7555-4db4-a7f3-12eb845393e2" />
