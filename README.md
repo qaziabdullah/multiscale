@@ -1,2 +1,27 @@
 # multiscale
-A simple program to manage multiple SOCKS5 proxies created with tailscaled. 
+A Windows GUI orchestrator for multiplexing egress traffic across multiple isolated Tailscale networks. 
+
+This tool leverages Tailscale's userspace networking mode (`gVisor`) to run up to 5 independent Tailscale daemons simultaneously. Each instance binds to a unique local SOCKS5 port and routes traffic through a specific remote exit node. Because it uses userspace networking, it **does not** create virtual network adapters or alter the Windows system routing table. Your host machine's normal network traffic remains entirely unaffected.
+
+## Features
+* **Total Isolation:** Each node uses its own state directory and named pipe (`\\.\pipe\ts_node...`).
+* **Zero Host Interference:** Leaves the host OS routing table untouched.
+* **Persistent Configuration:** Automatically saves Ports, Exit Node IPs, and AuthKeys.
+* **Clean Shutdown:** Gracefully tracks and kills spawned background `tailscaled.exe` processes on exit.
+
+## Prerequisites
+To run or compile this application, you need:
+1. **Tailscale:** Installed in its default Windows directory (`C:\Program Files\Tailscale\`).
+2. **Go:** Version 1.20 or newer.
+3. **C Compiler (For Windows GUI):** Fyne requires a C-compiler to build graphics libraries. We recommend [w64devkit](https://github.com/skeeto/w64devkit/releases).
+
+---
+
+## 🛠️ Build Instructions (Windows)
+
+Because this application uses the Fyne GUI toolkit, Go requires `CGO_ENABLED=1` and a functional `gcc` compiler to build the OpenGL components. 
+
+1. **Clone the repository:**
+   ```cmd
+   git clone [https://github.com/YOUR-USERNAME/tailscale-manager.git](https://github.com/YOUR-USERNAME/tailscale-manager.git)
+   cd tailscale-manager
